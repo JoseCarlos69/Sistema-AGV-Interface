@@ -1,12 +1,12 @@
 import React from 'react';
 import './App.css';
-import Home from './Telas/Home';
+import Rotas from './Rotas';
 
 const App = () => {
   return (
-    <div>
-      <Home />
-    </div>
+    <>
+      <Rotas />
+    </>
   );
 };
 
