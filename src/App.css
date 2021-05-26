@@ -20,12 +20,6 @@ body {
   --corInativo: #f96c6c;
 }
 
-@media (max-width: 730px) {
-  body {
-    padding-top: 80px;
-  }
-}
-
 h1,
 h2,
 h3,
@@ -65,10 +59,4 @@ img {
   width: 100%;
   max-width: 100%;
   display: block;
-}
-
-.img_container {
-  width: 100%;
-  border-radius: 4px;
-  overflow: hidden;
 }
