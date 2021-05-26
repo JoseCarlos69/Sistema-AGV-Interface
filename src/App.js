@@ -1,11 +1,11 @@
 import React from 'react';
 import './App.css';
-import TituloPagina from './Componentes/TituloPagina';
+import Home from './Telas/Home';
 
 const App = () => {
   return (
     <div>
-      <TituloPagina>Título teste para estilo</TituloPagina>
+      <Home />
     </div>
   );
 };
