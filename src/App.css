@@ -10,6 +10,7 @@
 }
 
 body {
+  /* Depois pode pegar a font Roboto e linkar aqui */
   font-family: sans-serif;
   --preto: #1f2538;
   --branco: #fff;

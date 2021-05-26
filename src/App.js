@@ -1,10 +1,11 @@
 import React from 'react';
 import './App.css';
+import TituloPagina from './Componentes/TituloPagina';
 
 const App = () => {
   return (
     <div>
-      Olá mundo
+      <TituloPagina>Título teste para estilo</TituloPagina>
     </div>
   );
 };
