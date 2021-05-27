@@ -1,0 +1,62 @@
+.BotaoMenu {
+  width: 48px;
+  height: 48px;
+  padding: 0.5rem;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  overflow: hidden;
+}
+
+.BotaoMenu span {
+  width: 2rem;
+  height: 0.25rem;
+  border-radius: 2px;
+  display: block;
+  background-color: currentColor;
+  transition: 0.4s ease;
+}
+
+.BotaoMenu span + span {
+  margin-top: 6px;
+}
+
+.BotaoMenu span:nth-child(1),
+.BotaoMenu span:nth-child(3) {
+  margin-left: -0.5rem;
+}
+
+.BotaoMenu span:nth-child(2) {
+  margin-left: 0.5rem;
+}
+
+.BotaoMenu:hover span,
+.BotaoMenu:focus span {
+  margin-left: 0;
+  background-color: var(--branco);
+}
+
+.BotaoMenu.ativo span {
+  margin-left: 0;
+}
+
+.BotaoMenu.ativo span:nth-child(1) {
+  transform: rotate(45deg);
+  position: absolute;
+  top: 25px;
+}
+
+.BotaoMenu.ativo span:nth-child(2) {
+  transform: translateX(200%);
+}
+
+.BotaoMenu.ativo span:nth-child(3) {
+  transform: rotate(-45deg);
+  position: absolute;
+}
