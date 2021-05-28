@@ -1,0 +1,10 @@
+.Navegacao a {
+    padding: 0.2rem;
+    display: block;
+    outline: none;
+    color: var(--cinzaClaro);
+}
+
+.Navegacao a:hover, .Navegacao .ativo, .Navegacao a:focus {
+    color: var(--branco);
+}

@@ -1,6 +1,7 @@
 import React from 'react'
 import estilos from './index.module.css';
-import BotaoMenu from '../BotaoMenu'
+import BotaoMenu from '../BotaoMenu';
+import Navegacao from '../Navegacao'
 
 const MenuLateral = () => {
     const [ menuAtivo, setMenuAtivo ] = React.useState(false);
@@ -8,6 +9,7 @@ const MenuLateral = () => {
     return (
         <aside className={estilos.MenuLateral}>
             <BotaoMenu menuAtivo={ menuAtivo } setMenuAtivo={ setMenuAtivo } />
+            <Navegacao/>
         </aside>
     );
 };
