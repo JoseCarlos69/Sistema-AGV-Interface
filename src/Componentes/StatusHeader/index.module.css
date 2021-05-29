@@ -1,0 +1,28 @@
+.StatusHeader {
+    font-size: 1.25rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: var(--preto);
+    display: flex;
+    align-items: center;
+}
+
+.StatusHeader::before {
+    content: '';
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 0.5rem;
+    border-radius: 50%;
+    color: var(--cinzaLink);
+    background-color: currentColor;
+    box-shadow: 0 0 6px currentColor;
+    display: inline-block;
+}
+
+.StatusHeader.ativo::before {
+    color: var(--corAtivo);
+}
+
+.StatusHeader.inativo::before {
+    color: var(--corInativo);
+}

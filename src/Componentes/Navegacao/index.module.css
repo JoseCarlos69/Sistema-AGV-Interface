@@ -22,7 +22,7 @@
     padding: 0.5rem;
     font-size: 1rem;
     text-transform: uppercase;
-    color: var(--cinzaClaro);
+    color: var(--cinzaLink);
     display: flex;
     align-items: center;
 }
