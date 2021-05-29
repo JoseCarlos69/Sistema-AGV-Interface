@@ -10,8 +10,11 @@
 }
 
 body {
-  /* Depois pode pegar a font Roboto e linkar aqui */
+  padding-left: 80px;
   font-family: sans-serif;
+  background-color: #EBEDF2;
+
+  /* Variáveis de estilo */
   --preto: #1f2538;
   --branco: #fff;
   --cinzaTexto: #666;

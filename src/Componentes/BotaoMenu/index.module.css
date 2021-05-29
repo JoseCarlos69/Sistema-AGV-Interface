@@ -3,11 +3,12 @@
   height: 48px;
   padding: 0.5rem;
   border: none;
+  color: var(--cinzaClaro);
+  background-color: transparent;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: transparent;
   position: relative;
   cursor: pointer;
   outline: none;
@@ -27,18 +28,8 @@
   margin-top: 6px;
 }
 
-.BotaoMenu span:nth-child(1),
-.BotaoMenu span:nth-child(3) {
-  margin-left: -0.5rem;
-}
-
-.BotaoMenu span:nth-child(2) {
-  margin-left: 0.5rem;
-}
-
 .BotaoMenu:hover span,
 .BotaoMenu:focus span {
-  margin-left: 0;
   background-color: var(--branco);
 }
 
