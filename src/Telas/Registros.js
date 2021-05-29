@@ -3,9 +3,9 @@ import TituloPagina from '../Componentes/TituloPagina';
 
 const Registros = () => {
     return (
-        <>
+        <section className="animarEntradaSessao">
             <TituloPagina>Registros</TituloPagina>
-        </>
+        </section>
     );
 };
 
