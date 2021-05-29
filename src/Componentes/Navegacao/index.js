@@ -1,9 +1,9 @@
 import React from 'react';
 import estilos from './index.module.css';
 import { NavLink } from 'react-router-dom';
-import IconeHome from '../../Assets/iconeHome.svg';
-import IconeRegistros from '../../Assets/iconeRegistros.svg';
-import IconeHistoricos from '../../Assets/iconeHistoricos.svg';
+import IconeHome from '../../Assets/iconeHome';
+import IconeRegistros from '../../Assets/iconeRegistros';
+import IconeHistoricos from '../../Assets/iconeHistoricos';
 
 const Navegacao = () => {
     return (
@@ -11,27 +11,21 @@ const Navegacao = () => {
             <ul>
                 <li>
                     <NavLink to="/" activeClassName={estilos.ativo} end>
-                        <div className={estilos.iconeContainer}>
-                            <img src={IconeHome} alt="Ícone da página Home." />
-                        </div>
+                        <IconeHome />
                         Home
                     </NavLink>
                 </li>
 
                 <li>
                     <NavLink to="/Registros" activeClassName={estilos.ativo} end>
-                        <div className={estilos.iconeContainer}>
-                            <img src={IconeRegistros} alt="Ícone da página Home." />
-                        </div>
+                        <IconeRegistros />
                         Registros
                     </NavLink>
                 </li>
 
                 <li>
                     <NavLink to="/Historicos" activeClassName={estilos.ativo} end>
-                        <div className={estilos.iconeContainer}>
-                            <img src={IconeHistoricos} alt="Ícone da página Home." />
-                        </div>
+                        <IconeHistoricos />
                         Historicos
                     </NavLink>
                 </li>
