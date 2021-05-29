@@ -7,9 +7,11 @@ const MenuLateral = () => {
     const [ menuAtivo, setMenuAtivo ] = React.useState(false);
 
     return (
-        <aside className={estilos.MenuLateral}>
-            <BotaoMenu menuAtivo={ menuAtivo } setMenuAtivo={ setMenuAtivo } />
-            <Navegacao/>
+        <aside className={`${estilos.MenuLateral} ${menuAtivo ? estilos.ativo : ''}`}>
+            <div className={estilos.conteudo}>
+                <BotaoMenu menuAtivo={ menuAtivo } setMenuAtivo={ setMenuAtivo } />
+                { menuAtivo && <Navegacao /> }
+            </div>
         </aside>
     );
 };
