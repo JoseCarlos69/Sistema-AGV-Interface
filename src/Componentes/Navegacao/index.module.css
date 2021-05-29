@@ -1,10 +1,39 @@
-.Navegacao a {
-    padding: 0.2rem;
-    display: block;
-    outline: none;
-    color: var(--cinzaClaro);
+@keyframes animarEntradaMenu {
+    from {
+        opacity: 0;
+        transform: translateX(-4rem);
+    } to {
+        opacity: initial;
+        transform: initial;
+    }
 }
 
-.Navegacao a:hover, .Navegacao .ativo, .Navegacao a:focus {
+.Navegacao ul {
+    margin-top: 1rem;
+    padding-left: 1rem;
+    animation: animarEntradaMenu 0.5s ease forwards;
+}
+
+.Navegacao li + li {
+    margin-top: 0.5rem;
+}
+
+.Navegacao a {
+    font-size: 1.25rem;
+    padding: 0.5rem;
+    color: var(--cinzaClaro);
+    display: flex;
+    align-items: center;
+}
+
+.Navegacao a:hover,
+.Navegacao .ativo,
+.Navegacao a:focus {
     color: var(--branco);
+}
+
+.iconeContainer {
+    height: 1rem;
+    width: 1rem;
+    margin-right: 1rem;
 }
