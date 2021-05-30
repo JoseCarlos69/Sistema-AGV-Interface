@@ -1,9 +1,9 @@
 import React from 'react';
 import estilos from './index.module.css';
 import { NavLink } from 'react-router-dom';
-import IconeHome from '../../Assets/iconeHome';
-import IconeRegistros from '../../Assets/iconeRegistros';
-import IconeHistoricos from '../../Assets/iconeHistoricos';
+import IconeHome from '../../../Assets/iconeHome';
+import IconeRegistros from '../../../Assets/iconeRegistros';
+import IconeHistoricos from '../../../Assets/iconeHistoricos';
 
 const Navegacao = () => {
     return (
