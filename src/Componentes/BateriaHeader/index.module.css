@@ -1,0 +1,38 @@
+.BateriaHeader {
+    font-size: 1.25rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: var(--preto);
+    display: flex;
+    align-items: center;
+}
+
+.BateriaHeader span {
+    width: 2rem;
+    height: 1rem;
+    margin-right: 0.5rem;
+    border-radius: 4px;
+    border: 3px solid var(--preto);
+    display: block;
+    position: relative;
+}
+
+.BateriaHeader span::after {
+    content: '';
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background: linear-gradient(90deg, transparent, 50%, var(--preto) 50%);
+    display: block;
+    position: absolute;
+    top: 1px;
+    right: -0.4rem;
+}
+
+.BateriaHeader span.verde {
+    color: var(--corAtivo);
+}
+
+.BateriaHeader span.vermelho {
+    color: var(--corInativo);
+}
