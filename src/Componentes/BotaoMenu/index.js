@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import estilos from './index.module.css';
 
 const BotaoMenu = ({ menuAtivo, setMenuAtivo }) => {

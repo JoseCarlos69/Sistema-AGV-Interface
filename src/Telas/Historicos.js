@@ -1,11 +1,19 @@
-import React from 'react'
-import TituloPagina from '../Componentes/TituloPagina'
+import React from 'react';
+import Head  from '../Componentes/Util/Head';
+import TituloPagina from '../Componentes/TituloPagina';
 
 const Históricos = () => {
     return (
-        <section className="animarEntradaSessao">
-            <TituloPagina>Históricos</TituloPagina>
-        </section>
+        <>
+            <Head
+                title="Históricos"
+                description="Tenha acesso a tudo que foi registrado na última semana ou no último semestre."
+            />
+
+            <section className="animarEntradaSessao">
+                <TituloPagina>Históricos</TituloPagina>
+            </section>
+        </>
     );
 };
 
