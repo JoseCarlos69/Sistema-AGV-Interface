@@ -38,3 +38,16 @@
     width: 1rem;
     margin-right: 1rem;
 }
+
+@media (max-width: 740px) {
+    .Navegacao ul {
+        padding-left: 0;
+    }
+
+    .Navegacao a {
+        margin-left: -2rem;
+        font-size: 1.25rem;
+        justify-content: center;
+        text-align: center;
+    }
+}

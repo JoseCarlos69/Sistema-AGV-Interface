@@ -68,7 +68,7 @@ img {
 
 /* Estilos Gerais */
 main {
-  padding: 0 2rem;
+  padding: 0 1rem;
 }
 
 @keyframes animarEntradaSessao {
@@ -83,4 +83,17 @@ main {
 
 .animarEntradaSessao {
   animation: animarEntradaSessao 0.5s ease forwards;
+}
+
+/* Responsividade */
+@media (max-width: 1240px) {
+  body {
+    padding-top: 6rem;
+  }
+}
+
+@media (max-width: 740px) {
+  body {
+    padding-left: 0;
+  }
 }

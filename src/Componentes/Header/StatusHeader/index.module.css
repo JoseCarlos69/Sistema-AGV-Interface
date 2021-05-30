@@ -25,3 +25,14 @@
 .StatusHeader.inativo::before {
     color: var(--corInativo);
 }
+
+@media (max-width: 740px) {
+    .StatusHeader {
+        font-size: 1rem;
+    }
+
+    .StatusHeader::before {
+        width: 0.75rem;
+        height: 0.75rem;
+    }
+}

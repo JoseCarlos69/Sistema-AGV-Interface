@@ -7,7 +7,7 @@ const index = () => {
     return (
         <header className={estilos.Header}>
             <StatusHeader />
-            <BateriaHeader bateria={19} />
+            <BateriaHeader bateria={100} />
         </header>
     );
 };

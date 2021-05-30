@@ -29,7 +29,7 @@
 }
 
 .BotaoMenu:hover span,
-.BotaoMenu:focus span {
+.BotaoMenu:active span {
   background-color: var(--branco);
 }
 

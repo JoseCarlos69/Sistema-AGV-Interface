@@ -36,3 +36,20 @@
 .BateriaHeader span.vermelho {
     color: var(--corInativo);
 }
+
+@media (max-width: 740px) {
+    .BateriaHeader {
+        font-size: 0.875rem;
+    }
+
+    .BateriaHeader span {
+        width: 1.5rem;
+        height: 0.75rem;
+        border-radius: 4px;
+    }
+
+    .BateriaHeader span::after {
+        top: 0;
+        right: -0.3rem;
+    }
+}
