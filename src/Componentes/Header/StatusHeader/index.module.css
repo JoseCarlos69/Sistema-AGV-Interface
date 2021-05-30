@@ -1,8 +1,7 @@
 .StatusHeader {
     font-size: 1.25rem;
     font-weight: bold;
-    text-transform: uppercase;
-    color: var(--preto);
+    color: var(--cinzaTexto);
     display: flex;
     align-items: center;
 }

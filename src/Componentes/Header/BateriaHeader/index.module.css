@@ -2,7 +2,7 @@
     font-size: 1.25rem;
     font-weight: bold;
     text-transform: uppercase;
-    color: var(--preto);
+    color: var(--cinzaTexto);
     display: flex;
     align-items: center;
 }
@@ -10,9 +10,9 @@
 .BateriaHeader span {
     width: 2rem;
     height: 1rem;
-    margin-right: 0.5rem;
+    margin-right: 0.75rem;
     border-radius: 4px;
-    border: 3px solid var(--preto);
+    border: 3px solid var(--cinzaTexto);
     display: block;
     position: relative;
 }
@@ -22,7 +22,7 @@
     width: 0.5rem;
     height: 0.5rem;
     border-radius: 50%;
-    background: linear-gradient(90deg, transparent, 50%, var(--preto) 50%);
+    background: linear-gradient(90deg, transparent, 50%, var(--cinzaTexto) 50%);
     display: block;
     position: absolute;
     top: 1px;

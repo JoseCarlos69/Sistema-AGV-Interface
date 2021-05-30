@@ -6,7 +6,9 @@ const BateriaHeader = ({ bateria }) => {
         <p className={estilos.BateriaHeader}>
             <span
                 className={`${bateria > 20 ? estilos.verde : estilos.vermelho}`}
-                style={{ background: `linear-gradient(90deg, currentColor, ${bateria}%, transparent ${bateria}%)` }}
+                style={{
+                    background: `linear-gradient(90deg, currentColor, ${bateria}%, transparent ${bateria}%)`
+                }}
             ></span>
             {bateria}%
         </p>
