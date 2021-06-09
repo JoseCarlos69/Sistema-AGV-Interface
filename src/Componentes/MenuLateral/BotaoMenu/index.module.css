@@ -3,7 +3,7 @@
   height: 48px;
   padding: 0.5rem;
   border: none;
-  color: var(--cinzaClaro);
+  color: var(--branco);
   background-color: transparent;
   display: flex;
   flex-direction: column;
@@ -28,9 +28,21 @@
   margin-top: 6px;
 }
 
-.BotaoMenu:hover span,
-.BotaoMenu:active span {
-  background-color: var(--branco);
+@keyframes animarHoverMenu {
+  0% {
+    transform: initial;
+  }
+  50% {
+    transform: rotate(90deg) scale(0.3);
+  }
+  100% {
+    transform: rotate(180deg) scale(1);
+    color: blue;
+  }
+}
+
+.BotaoMenu:hover > span:nth-child(2) {
+  animation: animarHoverMenu 1s ease forwards;
 }
 
 .BotaoMenu.ativo span {

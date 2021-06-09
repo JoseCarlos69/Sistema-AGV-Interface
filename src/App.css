@@ -13,16 +13,18 @@
 body {
   padding: 3rem 0 0 80px;
   font-family: sans-serif;
-  background-color: #EBEDF2;
+  background: url("./Assets/imagemDeFundo.jpg");
 
   /* Variáveis de estilo */
   --preto: #1f2538;
+  --vermelho: #c82132;
   --branco: #fff;
   --cinzaTexto: #666;
   --cinzaClaro: #aaa;
   --cinzaLink: #c7c9cd;
   --corAtivo: #04fe86;
   --corInativo: #f96c6c;
+  --sombra: 0px 0px 16px 4px rgba(44, 44, 44, 0.2);
 }
 
 h1,
@@ -75,7 +77,8 @@ main {
   from {
     opacity: 0;
     transform: scale(0.5);
-  } to {
+  }
+  to {
     opacity: initial;
     transform: initial;
   }
