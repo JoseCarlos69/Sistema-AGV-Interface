@@ -28,25 +28,12 @@
   margin-top: 6px;
 }
 
-@keyframes animarHoverMenu {
-  0% {
-    transform: initial;
-  }
-  50% {
-    transform: rotate(90deg) scale(0.3);
-  }
-  100% {
-    transform: rotate(180deg) scale(1);
-    color: blue;
-  }
+.BotaoMenu:hover > span {
+  transform: scale(1.2);
 }
 
-.BotaoMenu:hover > span:nth-child(2) {
-  animation: animarHoverMenu 1s ease forwards;
-}
-
-.BotaoMenu.ativo span {
-  margin-left: 0;
+.BotaoMenu:hover > span + span {
+  margin-top: 10px;
 }
 
 .BotaoMenu.ativo span:nth-child(1) {
@@ -62,4 +49,18 @@
 .BotaoMenu.ativo span:nth-child(3) {
   transform: rotate(-45deg);
   position: absolute;
+}
+
+.BotaoMenu.ativo:hover > span + span {
+  margin-top: 6px;
+}
+
+@media (max-width: 740px) {
+  .BotaoMenu:hover > span {
+    transform: initial;
+  }
+  
+  .BotaoMenu:hover > span + span {
+    margin-top: 6px;
+  }
 }

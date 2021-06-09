@@ -13,7 +13,14 @@
 body {
   padding: 3rem 0 0 80px;
   font-family: sans-serif;
-  background: url("./Assets/imagemDeFundo.jpg");
+  /* url - Define a imagem.
+  ** no-repeat - Faz a imagem não repetir.
+  ** top - Define a posição da imagem no eixo Y.
+  ** right - Define a posição da imagem no eixo X;
+  ** background-size: cover; - Faz a imagem ocupar o espaço todo e cortar a imagem sem distorcer.
+  */
+  background: #EFEFEF url('./Assets/patternBg.jpg') top right no-repeat;
+  background-size: cover;
 
   /* Variáveis de estilo */
   --preto: #1f2538;
@@ -92,6 +99,7 @@ main {
 @media (max-width: 1240px) {
   body {
     padding-top: 6rem;
+    background-repeat: repeat;
   }
 }
 
