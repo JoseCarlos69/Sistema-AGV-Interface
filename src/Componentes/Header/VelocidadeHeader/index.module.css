@@ -1,0 +1,26 @@
+.VelocidadeHeader {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: var(--cinzaTexto);
+    display: flex;
+    align-items: center;
+}
+
+.VelocidadeHeader svg {
+    width: 2rem;
+    height: auto;
+}
+
+.VelocidadeHeader span {
+    margin-right: 0.5rem;
+}
+
+@media (max-width: 740px) {
+    .VelocidadeHeader {
+        font-size: 1rem;
+    }
+
+    .VelocidadeHeader svg {
+        width: 1.25rem;
+    }
+}

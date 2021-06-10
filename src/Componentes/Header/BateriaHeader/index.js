@@ -3,7 +3,7 @@ import estilos from './index.module.css';
 
 const BateriaHeader = ({ bateria }) => {
     return (
-        <p className={estilos.BateriaHeader}>
+        <div className={estilos.BateriaHeader}>
             <span
                 className={`${bateria > 20 ? estilos.verde : estilos.vermelho}`}
                 style={{
@@ -11,7 +11,7 @@ const BateriaHeader = ({ bateria }) => {
                 }}
             ></span>
             {bateria}%
-        </p>
+        </div>
     );
 };
 
