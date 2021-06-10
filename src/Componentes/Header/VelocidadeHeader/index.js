@@ -1,12 +1,18 @@
 import React from 'react';
 import estilos from './index.module.css';
 import IconeVelocidade from '../../../Assets/iconeVelocidade';
+import useMedia from '../../../Hooks/useMedia';
 
 const VelocidadeHeader = () => {
+    const isMobile = useMedia("(max-width: 740px)");
+
     return (
         <p className={estilos.VelocidadeHeader}>
             <IconeVelocidade />
-            <span>Velocidade</span>30cm/s
+
+            { !isMobile && <span>Velocidade</span> }
+
+            30cm/s
         </p>
     );
 };
