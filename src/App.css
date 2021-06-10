@@ -31,7 +31,7 @@ body {
   --cinzaLink: #c7c9cd;
   --corAtivo: #04fe86;
   --corInativo: #f96c6c;
-  --sombra: 0px 0px 16px 4px rgba(44, 44, 44, 0.2);
+  --sombra: 0px 0px 16px 4px rgba(44, 44, 44, 0.1);
 }
 
 h1,
