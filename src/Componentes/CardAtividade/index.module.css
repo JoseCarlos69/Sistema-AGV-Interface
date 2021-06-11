@@ -1,7 +1,9 @@
 .CardAtividade {
+    width: 100%;
     max-width: calc((100% / 12) * 4 - 2rem);
     padding: 2rem 1.5rem 1.5rem;
     border-radius: 1rem;
+    margin-bottom: 2rem;
     box-shadow: var(--sombra);
     display: grid;
     grid-template-columns: 1fr auto;

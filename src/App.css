@@ -32,6 +32,14 @@ body {
   --corAtivo: #04fe86;
   --corInativo: #f96c6c;
   --sombra: 0px 0px 16px 4px rgba(44, 44, 44, 0.1);
+
+  /* Variáveis do layout */
+  --containerGrande: 1280px;
+  --containerMedio: 1080px;
+  --containerPequeno: 960px;
+  --containerTablet: 736px;
+  --containerMobileGrande: 580px;
+  --containerMobilePequeno: 300px;
 }
 
 h1,

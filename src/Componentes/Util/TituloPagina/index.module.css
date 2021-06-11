@@ -1,6 +1,6 @@
 .TituloPagina {
-    max-width: 100%;
-    margin-bottom: 1.5rem;
+    max-width: 1280px;
+    margin: 0 auto 1.5rem;
     font-size: 2.5rem;
     font-weight: bold;
     color: var(--preto);
