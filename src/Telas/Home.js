@@ -1,4 +1,5 @@
 import React from 'react';
+import CardAtividade from '../Componentes/CardAtividade';
 import Head  from '../Componentes/Util/Head';
 import TituloPagina from '../Componentes/Util/TituloPagina';
 
@@ -12,6 +13,8 @@ const Home = () => {
 
             <section className="animarEntradaSessao">
                 <TituloPagina>Sistema supervisório</TituloPagina>
+
+                <CardAtividade status="ativo" sensor="sensor 1" condicao="positiva" descricao="Sem ocorrências" />
             </section>
         </>
     );

@@ -7,6 +7,7 @@
     grid-template-columns: 1fr auto;
     align-items: flex-end;
     gap: 0.5rem 1rem;
+    position: relative;
 }
 
 .CardAtividade h2 {
