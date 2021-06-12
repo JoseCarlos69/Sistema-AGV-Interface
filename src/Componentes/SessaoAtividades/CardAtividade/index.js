@@ -1,8 +1,8 @@
 import React from 'react';
 import estilos from './index.module.css';
-import LegendaCard from '../LegendaCard';
-import IconeDefeito from '../../Assets/iconeDefeito';
-import IconeStatus from '../../Assets/iconeStatus';
+import LegendaCard from '../../Util/LegendaCard';
+import IconeStatus from '../../../Assets/iconeStatus';
+import IconeDefeito from '../../../Assets/iconeDefeito';
 
 const CardAtividade = ({ status, sensor, condicao, descricao }) => {
     return (

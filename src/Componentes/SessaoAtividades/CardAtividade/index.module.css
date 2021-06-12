@@ -35,7 +35,7 @@
     grid-column: 1 / -1;
     grid-row: 1 / -1;
     position: absolute;
-    top: 0;
+    top: -0.5rem;
     right: -1.5rem;
     z-index: 0;
 }
