@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 /* Reset */
 *,
 *::before,
@@ -12,7 +14,7 @@
 
 body {
   padding: 3rem 0 0 80px;
-  font-family: sans-serif;
+  font-family: 'Roboto', sans-serif;
   /* url - Define a imagem.
   ** no-repeat - Faz a imagem não repetir.
   ** top - Define a posição da imagem no eixo Y.
