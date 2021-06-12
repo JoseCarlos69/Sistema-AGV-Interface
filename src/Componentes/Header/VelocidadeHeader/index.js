@@ -1,6 +1,6 @@
 import React from 'react';
 import estilos from './index.module.css';
-import IconeVelocidade from '../../../Assets/iconeVelocidade';
+import IconeVelocidade from '../../../Assets/IconeVelocidade';
 import useMedia from '../../../Hooks/useMedia';
 
 const VelocidadeHeader = () => {

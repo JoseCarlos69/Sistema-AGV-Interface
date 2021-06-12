@@ -11,6 +11,20 @@ const SessaoAtividades = () => {
                 condicao="neutra"
                 descricao="Sem ocorrências"
             />
+
+            <CardAtividade
+                status="ativo"
+                sensor="Senso A"
+                condicao="positiva"
+                descricao="Sem ocorrências"
+            />
+
+            <CardAtividade
+                status="ativo"
+                sensor="Senso A"
+                condicao="negativa"
+                descricao="Ocorreu um problema"
+            />
         </SessaoTela>
     );
 };
