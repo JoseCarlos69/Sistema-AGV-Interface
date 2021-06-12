@@ -19,7 +19,7 @@ body {
   ** right - Define a posição da imagem no eixo X;
   ** background-size: cover; - Faz a imagem ocupar o espaço todo e cortar a imagem sem distorcer.
   */
-  background: #EFEFEF url('./Assets/patternBg.jpg') top right no-repeat;
+  background: #F7F7F7 url('./Assets/patternBg.jpg') top right repeat;
   background-size: cover;
 
   /* Variáveis de estilo */
@@ -34,12 +34,8 @@ body {
   --sombra: 0px 0px 16px 4px rgba(44, 44, 44, 0.1);
 
   /* Variáveis do layout */
-  --containerGrande: 1280px;
-  --containerMedio: 1080px;
-  --containerPequeno: 960px;
-  --containerTablet: 736px;
-  --containerMobileGrande: 580px;
-  --containerMobilePequeno: 300px;
+  --container: 1400px;
+  --gap: 1rem;
 }
 
 h1,
@@ -85,7 +81,7 @@ img {
 
 /* Estilos Gerais */
 main {
-  padding: 0 1rem;
+  padding: 0 var(--gap);
 }
 
 @keyframes animarEntradaSessao {
@@ -104,15 +100,26 @@ main {
 }
 
 /* Responsividade */
-@media (max-width: 1240px) {
+@media (max-width: 1200px) {
   body {
-    padding-top: 6rem;
-    background-repeat: repeat;
+    --container: 1080px;
   }
 }
 
-@media (max-width: 740px) {
+@media (max-width: 1080px) {
   body {
+    padding-top: 6rem;
     padding-left: 0;
+    background-size: initial;
+
+    --gap: 0.75rem;
+    --container: 960px;
+  }
+}
+
+@media (max-width: 980px) {
+  body {
+    --gap: 0.5rem;
+    --container: 100%;
   }
 }

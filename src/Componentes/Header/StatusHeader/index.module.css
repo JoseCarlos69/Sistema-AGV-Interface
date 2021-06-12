@@ -26,7 +26,7 @@
     color: var(--corInativo);
 }
 
-@media (max-width: 740px) {
+@media (max-width: 660px) {
     .StatusHeader {
         font-size: 1rem;
     }

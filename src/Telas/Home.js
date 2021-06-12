@@ -2,6 +2,7 @@ import React from 'react';
 import Head  from '../Componentes/Util/Head';
 import TituloPagina from '../Componentes/Util/TituloPagina';
 import SessaoTela from '../Componentes/Util/SessaoTela';
+import CardAtividade from '../Componentes/CardAtividade';
 
 const Home = () => {
     return (
@@ -15,6 +16,12 @@ const Home = () => {
                 <TituloPagina>Sistema supervisório</TituloPagina>
 
                 <SessaoTela titulo="Atividades">
+                    <CardAtividade
+                        status="inativo"
+                        sensor="Senso A"
+                        condicao="neutra"
+                        descricao="Sem ocorrências"
+                    />
                 </SessaoTela>
             </section>
         </>

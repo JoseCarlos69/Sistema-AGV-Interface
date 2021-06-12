@@ -43,12 +43,39 @@
   border-radius: 0 2rem 2rem 0;
 }
 
-@media (max-width: 740px) {
+@media (max-width: 1080px) {
+  .MenuLateral .conteudo {
+    max-width: 60px;
+    max-height: 60px;
+    padding: 0.25rem;
+    border-radius: 0 25% 25% 0;
+    overflow: hidden;
+  }
+
+  @keyframes animarAberturaMenu {
+    0% {
+      max-width: 60px;
+      max-height: 60px;
+    } 50% {
+      max-width: 300px;
+      max-height: 60px;
+    } 100% {
+      max-width: 300px;
+      max-height: 100%;
+    }
+  }
+
+  .MenuLateral.ativo .conteudo {
+    animation: animarAberturaMenu 0.4s linear forwards;
+  }
+}
+
+@media (max-width: 660px) {
   .MenuLateral .conteudo {
     max-width: 56px;
     max-height: 56px;
     padding: 0.25rem;
-    border-radius: 0 40% 40% 0;
+    border-radius: 0 25% 25% 0;
   }
 
   .MenuLateral::before {
@@ -59,6 +86,7 @@
     max-height: 100%;
     max-width: 100%;
     border-radius: 0;
+    animation: none;
   }
 
   .MenuLateral.ativo::before {

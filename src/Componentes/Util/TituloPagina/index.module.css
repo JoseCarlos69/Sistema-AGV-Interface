@@ -1,7 +1,14 @@
 .TituloPagina {
-    max-width: 1280px;
+    max-width: var(--container);
+    padding: 0 var(--gap);
     margin: 0 auto 1.5rem;
     font-size: 2.5rem;
     font-weight: bold;
     color: var(--preto);
+}
+
+@media (max-width: 660px) {
+    .TituloPagina {
+        font-size: 2rem;
+    }   
 }

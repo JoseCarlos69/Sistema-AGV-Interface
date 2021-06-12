@@ -1,16 +1,15 @@
 .SessaoTela {
     width: 100%;
-    max-width: var(--containerGrande);
+    max-width: var(--container);
     padding: 2rem 0;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
 }
 
 .SessaoTela > * {
-    margin-left: 1rem;
-    margin-right: 1rem;
+    margin-left: var(--gap);
+    margin-right: var(--gap);
 }
 
 .SessaoTela > h2 {
@@ -18,34 +17,4 @@
     margin-bottom: 3rem;
     font-size: 1.75rem;
     color: var(--preto);
-}
-
-@media (max-width: 1400px) {
-    .SessaoTela {
-        max-width: var(--containerMedio);
-    }
-}
-
-@media (max-width: 1300px) {
-    .SessaoTela {
-        max-width: var(--containerPequeno);
-    }
-}
-
-@media (max-width: 1080px) {
-    .SessaoTela {
-        max-width: var(--containerTablet);
-    }
-}
-
-@media (max-width: 856px) {
-    .SessaoTela {
-        max-width: var(--containerMobileGrande);
-    }
-}
-
-@media (max-width: 700px) {
-    .SessaoTela {
-        max-width: var(--containerMobilePequeno);
-    }
 }
