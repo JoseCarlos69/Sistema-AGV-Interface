@@ -1,0 +1,10 @@
+.svg {
+    width: 1rem;
+    height: 1rem;
+    fill: none;
+    margin-right: 1rem;
+}
+
+.svg path {
+    fill: currentColor;
+}
