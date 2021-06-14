@@ -4,17 +4,21 @@ import CardAtividade from './CardAtividade';
 // Redux
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchSensores } from '../../store/sensores';
+// API
+import { getSensores } from '../../api';
 
 const SessaoAtividades = () => {
     // Redux
-    const { loading, erro, dados } = useSelector((state) => state.sensores);
+    const { loading, erro, sensores } = useSelector((state) => state.sensores);
     const dispatch = useDispatch();
 
     React.useEffect(() => {
-        dispatch(fetchSensores());
+        const fetchConfig = getSensores();
+
+        dispatch(fetchSensores(fetchConfig));
 
         const intervalo = setInterval(() => {
-            dispatch(fetchSensores());
+            dispatch(fetchSensores(fetchConfig));
         }, 5 * 1000);
 
         return () => clearInterval(intervalo);
@@ -24,10 +28,10 @@ const SessaoAtividades = () => {
 
     if (erro) return <SessaoTela titulo="Erro ao buscar atividades"></SessaoTela>;
 
-    if (dados) {
+    if (sensores) {
         return (
             <SessaoTela titulo="Atividades">
-                { dados.map(({ status, sensor, condicao, descricao }) => (
+                { sensores.map(({ status, sensor, condicao, descricao }) => (
                     <CardAtividade
                         key={sensor}
                         status={status}
