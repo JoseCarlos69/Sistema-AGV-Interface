@@ -14,6 +14,12 @@ const Header = () => {
 
     React.useEffect(() => {
         dispatch(fetchStatus());
+
+        const intervalo = setInterval(() => {
+            dispatch(fetchStatus());
+        }, 5 * 1000);
+
+        return () => clearInterval(intervalo);
     }, [dispatch]);
 
     if (loading) {

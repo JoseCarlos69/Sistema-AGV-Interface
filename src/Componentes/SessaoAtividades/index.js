@@ -12,6 +12,12 @@ const SessaoAtividades = () => {
 
     React.useEffect(() => {
         dispatch(fetchSensores());
+
+        const intervalo = setInterval(() => {
+            dispatch(fetchSensores());
+        }, 5 * 1000);
+
+        return () => clearInterval(intervalo);
     }, [dispatch]);
 
     if (loading) return <SessaoTela titulo="Carregando atividades"></SessaoTela>;
@@ -23,6 +29,7 @@ const SessaoAtividades = () => {
             <SessaoTela titulo="Atividades">
                 { dados.map(({ status, sensor, condicao, descricao }) => (
                     <CardAtividade
+                        key={sensor}
                         status={status}
                         sensor={sensor}
                         condicao={condicao}
