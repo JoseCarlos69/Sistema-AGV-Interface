@@ -6,14 +6,14 @@ import IconeDefeito from '../../../Assets/IconeDefeito';
 
 const CardAtividade = ({ status, sensor, condicao, descricao }) => {
     return (
-        <div className={`${estilos.CardAtividade} ${estilos[condicao]}`}>
+        <div className={`${estilos.CardAtividade} ${estilos[condicao]} ${estilos[status]}`}>
             <LegendaCard legenda={sensor} />
 
             <h2>{status}</h2>
             <p>{descricao}</p>
 
             {
-                (condicao !== 'negativa') ? <IconeStatus /> : <IconeDefeito />
+                (condicao !== 'danificado') ? <IconeStatus /> : <IconeDefeito />
             }
         </div>
     );

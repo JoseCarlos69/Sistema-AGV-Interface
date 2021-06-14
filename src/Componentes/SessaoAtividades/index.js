@@ -1,32 +1,39 @@
 import React from 'react';
 import SessaoTela from '../Util/SessaoTela';
 import CardAtividade from './CardAtividade';
+// Redux
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchSensores } from '../../store/sensores';
 
 const SessaoAtividades = () => {
-    return (
-        <SessaoTela titulo="Atividades">
-            <CardAtividade
-                status="inativo"
-                sensor="Senso A"
-                condicao="neutra"
-                descricao="Sem ocorrências"
-            />
+    // Redux
+    const { loading, erro, dados } = useSelector((state) => state.sensores);
+    const dispatch = useDispatch();
 
-            <CardAtividade
-                status="ativo"
-                sensor="Senso A"
-                condicao="positiva"
-                descricao="Sem ocorrências"
-            />
+    React.useEffect(() => {
+        dispatch(fetchSensores());
+    }, [dispatch]);
 
-            <CardAtividade
-                status="ativo"
-                sensor="Senso A"
-                condicao="negativa"
-                descricao="Ocorreu um problema"
-            />
-        </SessaoTela>
-    );
+    if (loading) return <SessaoTela titulo="Carregando atividades"></SessaoTela>;
+
+    if (erro) return <SessaoTela titulo="Erro ao buscar atividades"></SessaoTela>;
+
+    if (dados) {
+        return (
+            <SessaoTela titulo="Atividades">
+                { dados.map(({ status, sensor, condicao, descricao }) => (
+                    <CardAtividade
+                        status={status}
+                        sensor={sensor}
+                        condicao={condicao}
+                        descricao={descricao}
+                    />
+                )) }
+            </SessaoTela>
+        );
+    }
+
+    return null;
 };
 
 export default SessaoAtividades;

@@ -1,12 +1,14 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
-import { useDispatch } from 'react-redux';
-import { fetchStatus } from '../../store/status';
 import estilos from './index.module.css'
 import StatusHeader from './StatusHeader';
 import VelocidadeHeader from './VelocidadeHeader';
+// Redux
+import { useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
+import { fetchStatus } from '../../store/status';
 
 const Header = () => {
+    // Redux
     const { loading, erro, dados } = useSelector((state) => state.status );
     const dispatch = useDispatch();
 

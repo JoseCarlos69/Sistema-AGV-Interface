@@ -40,36 +40,36 @@
     z-index: 0;
 }
 
-.CardAtividade.positiva {
+.CardAtividade.ativo {
     background: linear-gradient(180deg, rgba(255, 255, 255, 0) 20%, rgba(201, 255, 235, 0.5) 100%) #FFFFFF;
 }
 
-.CardAtividade.positiva svg {
+.CardAtividade.ativo svg {
     color: #8FD;
 }
 
-.CardAtividade.positiva h2 {
+.CardAtividade.ativo h2 {
     color: #3C9;
 }
 
-.CardAtividade.negativa {
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 82, 82, 0.2) 100%), #FFFFFF;
-}
-
-.CardAtividade.negativa svg, .CardAtividade.negativa h2 {
-    color: #FBB;
-}
-
-.CardAtividade.negativa h2 {
-    color: #F44;
-}
-
-.CardAtividade.neutra {
+.CardAtividade.inativo {
     background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(180, 180, 180, 0.5) 100%), #FFFFFF;
 }
 
-.CardAtividade.neutra svg, .CardAtividade.neutra h2 {
+.CardAtividade.inativo svg, .CardAtividade.inativo h2 {
     color: #777;
+}
+
+.CardAtividade.danificado {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 82, 82, 0.2) 100%), #FFFFFF;
+}
+
+.CardAtividade.danificado svg, .CardAtividade.danificado h2 {
+    color: #FBB;
+}
+
+.CardAtividade.danificado h2 {
+    color: #F44;
 }
 
 @media (max-width: 1200px) {
