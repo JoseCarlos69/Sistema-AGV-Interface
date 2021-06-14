@@ -3,11 +3,11 @@ import { useSelector } from 'react-redux';
 import estilos from './index.module.css';
 
 const StatusHeader = () => {
-    const { dados } = useSelector((state) => state.status);
+    const { status } = useSelector((state) => state.status);
 
     return (
-        <p className={`${estilos.StatusHeader} ${estilos[dados.status]}`}>
-            {dados.status}.
+        <p className={`${estilos.StatusHeader} ${estilos[status.status]}`}>
+            {status.status}.
         </p>
     );
 };

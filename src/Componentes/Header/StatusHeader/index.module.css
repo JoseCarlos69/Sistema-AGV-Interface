@@ -17,6 +17,7 @@
     background-color: currentColor;
     box-shadow: 0 0 6px currentColor;
     display: inline-block;
+    transition: 0.3s ease;
 }
 
 .StatusHeader.ativo::before {

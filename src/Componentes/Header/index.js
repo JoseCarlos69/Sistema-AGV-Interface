@@ -6,23 +6,27 @@ import VelocidadeHeader from './VelocidadeHeader';
 import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
 import { fetchStatus } from '../../store/status';
+// API
+import { getStatus } from '../../api';
 
 const Header = () => {
     // Redux
-    const { loading, erro, dados } = useSelector((state) => state.status );
+    const { loading, erro, status } = useSelector((state) => state.status );
     const dispatch = useDispatch();
 
     React.useEffect(() => {
-        dispatch(fetchStatus());
+        const fetchConfig = getStatus();
+
+        dispatch(fetchStatus(fetchConfig));
 
         const intervalo = setInterval(() => {
-            dispatch(fetchStatus());
+            dispatch(fetchStatus(fetchConfig));
         }, 5 * 1000);
 
         return () => clearInterval(intervalo);
     }, [dispatch]);
 
-    if (loading) {
+    if (loading && !status) {
         return (
             <header className={estilos.Header}>Carregando...</header>
         );
@@ -34,7 +38,7 @@ const Header = () => {
         );
     }
 
-    if (dados) {
+    if (status) {
         return (
             <header className={estilos.Header}>
                 <StatusHeader />
