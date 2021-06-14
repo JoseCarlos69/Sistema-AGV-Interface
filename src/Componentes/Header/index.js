@@ -1,5 +1,6 @@
 import React from 'react';
-import estilos from './index.module.css'
+import estilos from './index.module.css';
+import FeedbackHeader from './FeedbackHeader';
 import StatusHeader from './StatusHeader';
 import VelocidadeHeader from './VelocidadeHeader';
 // Redux
@@ -26,15 +27,11 @@ const Header = () => {
         return () => clearInterval(intervalo);
     }, [dispatch]);
 
-    if (loading && !status) {
+    if (!status) {
         return (
-            <header className={estilos.Header}>Carregando...</header>
-        );
-    }
-
-    if (erro) {
-        return (
-            <header className={estilos.Header}>Erro...</header>
+            <header className={estilos.Header}>
+                <FeedbackHeader loading={loading} erro={erro} />
+            </header>
         );
     }
 

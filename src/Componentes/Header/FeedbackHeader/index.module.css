@@ -1,0 +1,40 @@
+.FeedbackHeader {
+    padding: 0.5rem var(--gap) 0.5rem 0;
+    font-size: 1.25rem;
+    text-transform: capitalize;
+    color: var(--cinzaTexto);
+    display: flex;
+    align-items: center;
+    transition: none;
+}
+
+@keyframes rodarSpinner {
+    from {
+        transform: initial;
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.FeedbackHeader.loading::before {
+    content: '';
+    width: 0.75rem;
+    height: 0.75rem;
+    border-radius: 50%;
+    border: 2px solid #39D;
+    border-right-color: transparent;
+    margin-right: 0.5rem;
+    display: block;
+    animation: rodarSpinner 0.5s linear infinite;
+}
+
+.FeedbackHeader.erro {
+    color: var(--corInativo);
+}
+
+@media (max-width: 660px) {
+    .FeedbackHeader {
+        padding: 0 var(--gap) 0 0;
+    }
+}
