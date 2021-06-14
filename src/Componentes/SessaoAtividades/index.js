@@ -24,7 +24,7 @@ const SessaoAtividades = () => {
         return () => clearInterval(intervalo);
     }, [dispatch]);
 
-    if (loading) return <SessaoTela titulo="Carregando atividades"></SessaoTela>;
+    if (loading && !sensores) return <SessaoTela titulo="Carregando atividades"></SessaoTela>;
 
     if (erro) return <SessaoTela titulo="Erro ao buscar atividades"></SessaoTela>;
 

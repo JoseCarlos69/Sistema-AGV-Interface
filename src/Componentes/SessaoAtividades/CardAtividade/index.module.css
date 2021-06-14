@@ -72,6 +72,28 @@
     color: #F44;
 }
 
+@keyframes rodarSpinner {
+    from {
+        transform: initial;
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.CardAtividade .spinner {
+    width: 0.75rem;
+    height: 0.75rem;
+    border-radius: 50%;
+    border: 2px solid #39D;
+    border-right-color: transparent;
+    display: block;
+    position: absolute;
+    top: 0.5rem;
+    left: 0.5rem;
+    animation: rodarSpinner 0.3s linear infinite;
+}
+
 @media (max-width: 1200px) {
     .CardAtividade {
         padding: 2rem 1rem 1.5rem;

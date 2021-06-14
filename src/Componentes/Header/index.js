@@ -40,7 +40,7 @@ const Header = () => {
 
     if (status) {
         return (
-            <header className={estilos.Header}>
+            <header className={`${estilos.Header} ${loading ? estilos.loading : ''}`}>
                 <StatusHeader />
                 <VelocidadeHeader />
             </header>
