@@ -10,11 +10,12 @@
 // getDefaultMiddleware - Pega os middleware padrões do Redux, middleware são coisas que acontecem no meio do transporte de dados, no caso eu peço pro redux uma informação, redux pega, executa os middleware, depois me entrega os dados, isso pode servir caso você queira manipular todos os dados de uma determinada forma, então você cria um middleware e ele aplica isso pra todos os dados antes de te entregar.
 // configureStore - é usado pra criar/configurar a sua "store", que basicamente é o teu armazém de dados, é onde você irá acessar pra trazer os estados globais, ela é formada pelos reducers e pelos middleware.
 import { combineReducers, getDefaultMiddleware, configureStore } from '@reduxjs/toolkit';
+import status from './status';
 
 // com isso eu crios meus middlewares, getDefaultMiddleware me trás uma lista com os middlewares padrões, eu pego eles e espalho (spread) em uma nova array, ai quando eu quiser adicionar um middleware novo, eu só continuo colocando na array. 
 const middlewares = [...getDefaultMiddleware()];
 // Com o combine reducers eu vou criar meu reducer formado pelos reducers que foram combinados, no caso tudo vira uma coisa só, porém separando eles eu consigo me organizar melhor na hora de programar.
-const reducer = combineReducers({  });
+const reducer = combineReducers({ status });
 // Aqui eu configuro a store passando um objeto com o meu reducer e meus middlewares
 const store = configureStore({ reducer, middlewares });
 
