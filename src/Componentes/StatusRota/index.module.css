@@ -1,0 +1,38 @@
+.StatusRota {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: var(--cinzaTexto);
+    display: flex;
+    align-items: center;
+}
+
+.StatusRota::before {
+    content: '';
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 0.5rem;
+    border-radius: 50%;
+    color: var(--cinzaLink);
+    background-color: currentColor;
+    box-shadow: 0 0 6px currentColor;
+    display: inline-block;
+}
+
+.StatusRota.ativo::before {
+    color: var(--corAtivo);
+}
+
+.StatusRota.inativo::before {
+    color: var(--corInativo);
+}
+
+@media (max-width: 740px) {
+    .StatusRota {
+        font-size: 1rem;
+    }
+
+    .StatusRota::before {
+        width: 0.75rem;
+        height: 0.75rem;
+    }
+}

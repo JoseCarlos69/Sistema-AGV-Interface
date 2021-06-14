@@ -4,6 +4,7 @@ import Home from './Telas/Home';
 import Registros from './Telas/Registros';
 import Historicos from './Telas/Historicos';
 import HistoricosTabela from './Telas/HistoricosTabela';
+import RotaLocal from './Telas/RotaLocal';
 
 const Rotas = () => {
   return (
@@ -13,6 +14,7 @@ const Rotas = () => {
         <Route path="/registros" element={<Registros />} />
         <Route path="/historicos" element={<Historicos />} />
         <Route path="/historicos/:data" element={<HistoricosTabela />} />
+        <Route path="/Localizacao" element={<RotaLocal />} />
       </Routes>
     </main>
   );

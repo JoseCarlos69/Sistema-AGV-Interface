@@ -2,19 +2,12 @@
     width: 1rem;
     height: 1rem;
     fill: none;
+    margin-top: -1.8rem;
+    margin-left: 3rem;
     margin-right: 1rem;
+    color: white;
 }
 
 .svg path {
     fill: currentColor;
-}
-
-.horario{
-    margin-top: 70px;
-    margin-left: 15px;
-}
-
-.rota{
-    height: 372px;
-    width: 870px;
 }

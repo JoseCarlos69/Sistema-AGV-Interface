@@ -1,0 +1,76 @@
+/* Define a posição dos campos */
+section.fields{
+    margin-top: -280px; /* alinha àrea com os campos*/
+    margin-left: 1220px;
+} 
+
+/* Define o tamanho do box */
+div .fieldLocal,
+div .fieldPartida,
+div .fieldDestino,
+div .fieldVeloc {
+    height: 42px ;
+    width: 268px;
+    border-radius: 8px;
+    color: #6F6F6F;
+    background: #FFFFFF;
+    text-align: center;
+}
+
+/* Muda a cor de fundo ao passar o mouse em cima do elemento */
+div .fieldLocal:hover,
+div .fieldPartida:hover,
+div .fieldDestino:hover,
+div .fieldVeloc:hover{
+    background: #7D7DFF;
+    color: #FFFFFF;
+}
+
+/* Alinha o conteúdo ao centro */
+span{
+    margin: 0;
+    position: relative;
+    top:  20%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+/* Cria os cards*/
+.card{
+    margin-top: 0px;
+    margin-bottom: 100px;
+    margin-left: 100px;
+    height: 120px;
+    width: 445px;
+    background: #FFFFFF;
+    border-radius: 8px;
+    display: flex;
+    float: left;
+}
+
+.card > p{
+    margin-top: 0.5rem;
+    margin-left: -9.5rem; /* define a posição dos elementos dentro do card */
+    position: relative;
+    top:  115%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+p.ocorrencia{
+    margin-left: 0px;
+    text-align: left;
+}
+
+.rota{
+    height: 372px;
+    width: 870px;
+}
+
+.board{
+    margin-top: 0px;
+    margin-left: 80px;
+}
+
+.texto{
+    margin: 100px;
+}

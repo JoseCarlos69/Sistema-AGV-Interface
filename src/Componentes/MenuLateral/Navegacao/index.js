@@ -4,6 +4,7 @@ import { NavLink } from 'react-router-dom';
 import IconeHome from '../../../Assets/iconeHome';
 import IconeRegistros from '../../../Assets/iconeRegistros';
 import IconeHistoricos from '../../../Assets/iconeHistoricos';
+import IconePosition from '../../../Assets/iconePosition';
 
 const Navegacao = () => {
     return (
@@ -27,6 +28,13 @@ const Navegacao = () => {
                     <NavLink to="/Historicos" activeClassName={estilos.ativo} end>
                         <IconeHistoricos />
                         Historicos
+                    </NavLink>
+                </li>
+
+                <li>
+                    <NavLink to="/Localizacao" activeClassName={estilos.ativo} end>
+                        <IconePosition />
+                        Rota e Localização 
                     </NavLink>
                 </li>
             </ul>
