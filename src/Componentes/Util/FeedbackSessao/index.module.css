@@ -1,0 +1,56 @@
+.FeedbackSessao {
+  width: 100%;
+  max-width: 50%;
+  padding: 1.5rem;
+  background-color: #fff;
+  box-shadow: var(--sombra);
+  margin-left: 25%;
+  margin-right: 25%;
+  border-radius: 1rem;
+}
+
+.mensagem {
+  color: var(--cinzaTexto);
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.mensagem.erro {
+  color: #e99;
+}
+
+.mensagem.carregando:after {
+  line-height: 0;
+  font-size: 2.4rem;
+  content: ".";
+  animation: dots 1s steps(5, end) infinite;
+}
+
+@keyframes dots {
+  0%,
+  20% {
+    color: var(--cinzaTexto);
+    text-shadow: 0.25em 0 0 var(--cinzaClaro), 0.5em 0 0 var(--cinzaTexto);
+  }
+  40% {
+    color: white;
+    text-shadow: 0.25em 0 0 var(--cinzaClaro), 0.5em 0 0 var(--cinzaTexto);
+  }
+  60% {
+    text-shadow: 0.25em 0 0 var(--cinzaTexto), 0.5em 0 0 var(--cinzaClaro);
+  }
+  80%,
+  100% {
+    text-shadow: 0.25em 0 0 var(--cinzaTexto), 0.5em 0 0 var(--cinzaTexto);
+  }
+}
+
+@media (max-width: 660px) {
+  .FeedbackSessao {
+    max-width: 100%;
+    margin-left: var(--gap);
+    margin-right: var(--gap);
+  }
+}

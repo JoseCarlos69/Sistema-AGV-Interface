@@ -1,129 +1,149 @@
 .CardAtividade {
-    width: 100%;
-    max-width: calc((100% / 12) * 4 - (var(--gap) * 2));
-    padding: 2rem 1.5rem 1.5rem;
-    border-radius: 1rem;
-    margin-bottom: 2rem;
-    box-shadow: var(--sombra);
-    display: grid;
-    align-items: flex-end;
-    grid-template-columns: 1fr;
-    gap: 0.5rem;
-    position: relative;
+  width: 100%;
+  max-width: calc((100% / 12) * 4 - (var(--gap) * 2));
+  padding: 2rem 1.5rem 1.5rem;
+  border-radius: 1rem;
+  margin-bottom: 2rem;
+  box-shadow: var(--sombra);
+  display: grid;
+  align-items: flex-end;
+  grid-template-columns: 1fr;
+  gap: 0.5rem;
+  position: relative;
 }
 
 .CardAtividade h2 {
-    font-size: 1.5rem;
-    font-weight: 700;
-    text-transform: capitalize;
-    letter-spacing: 1px;
-    position: relative;
-    z-index: 2;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  position: relative;
+  z-index: 2;
 }
 
 .CardAtividade p {
-    font-size: 1.5rem;
-    line-height: 1.5rem;
-    color: var(--preto);
-    position: relative;
-    z-index: 2;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  color: var(--preto);
+  position: relative;
+  z-index: 2;
 }
 
 .CardAtividade svg {
-    width: 80px;
-    height: 80px;
-    grid-column: 1 / -1;
-    grid-row: 1 / -1;
-    position: absolute;
-    top: -0.5rem;
-    right: -1.5rem;
-    z-index: 0;
+  width: 80px;
+  height: 80px;
+  grid-column: 1 / -1;
+  grid-row: 1 / -1;
+  position: absolute;
+  top: -0.5rem;
+  right: -1.5rem;
+  z-index: 0;
 }
 
 .CardAtividade.ativo {
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 20%, rgba(201, 255, 235, 0.5) 100%) #FFFFFF;
+  background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0) 20%,
+      rgba(201, 255, 235, 0.5) 100%
+    )
+    #ffffff;
 }
 
 .CardAtividade.ativo svg {
-    color: #8FD;
+  color: #8fd;
 }
 
 .CardAtividade.ativo h2 {
-    color: #3C9;
+  color: #3c9;
 }
 
 .CardAtividade.inativo {
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(180, 180, 180, 0.5) 100%), #FFFFFF;
+  background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(180, 180, 180, 0.5) 100%
+    ),
+    #ffffff;
 }
 
-.CardAtividade.inativo svg, .CardAtividade.inativo h2 {
-    color: #777;
+.CardAtividade.inativo svg {
+  color: #888;
+}
+
+.CardAtividade.inativo h2 {
+  color: #777;
 }
 
 .CardAtividade.danificado {
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 82, 82, 0.2) 100%), #FFFFFF;
+  background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 82, 82, 0.2) 100%
+    ),
+    #ffffff;
 }
 
-.CardAtividade.danificado svg, .CardAtividade.danificado h2 {
-    color: #FBB;
+.CardAtividade.danificado svg,
+.CardAtividade.danificado h2 {
+  color: #fbb;
 }
 
 .CardAtividade.danificado h2 {
-    color: #F44;
+  color: #f44;
 }
 
 @keyframes rodarSpinner {
-    from {
-        transform: initial;
-    }
-    to {
-        transform: rotate(360deg);
-    }
+  from {
+    transform: initial;
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .CardAtividade .spinner {
-    width: 0.75rem;
-    height: 0.75rem;
-    border-radius: 50%;
-    border: 2px solid #39D;
-    border-right-color: transparent;
-    display: block;
-    position: absolute;
-    top: 0.5rem;
-    left: 0.5rem;
-    animation: rodarSpinner 0.3s linear infinite;
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+  border: 2px solid #39d;
+  border-right-color: transparent;
+  display: block;
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  animation: rodarSpinner 0.3s linear infinite;
 }
 
 @media (max-width: 1200px) {
-    .CardAtividade {
-        padding: 2rem 1rem 1.5rem;
-    }
+  .CardAtividade {
+    padding: 2rem 1rem 1.5rem;
+  }
 
-    .CardAtividade svg {
-        width: 64px;
-        height: 64px;
-        right: -1rem;
-    }
+  .CardAtividade svg {
+    width: 64px;
+    height: 64px;
+    right: -1rem;
+  }
 
-    .CardAtividade p {
-        font-size: 1.25rem;
-        line-height: 1.25rem;
-    }
+  .CardAtividade p {
+    font-size: 1.25rem;
+    line-height: 1.25rem;
+  }
 }
 
 @media (max-width: 1080px) {
-    .CardAtividade {
-        max-width: calc((100% / 12) * 6 - (var(--gap) * 2));
-        padding: 2rem 5rem 1.5rem 1.5rem;
-    }
+  .CardAtividade {
+    max-width: calc((100% / 12) * 6 - (var(--gap) * 2));
+    padding: 2rem 5rem 1.5rem 1.5rem;
+  }
 
-    .CardAtividade svg {
-        right: -5rem;
-    }
+  .CardAtividade svg {
+    right: -5rem;
+  }
 }
 
 @media (max-width: 660px) {
-    .CardAtividade {
-        max-width: 100%;
-    }
+  .CardAtividade {
+    max-width: 100%;
+  }
 }

@@ -1,6 +1,7 @@
 import React from 'react';
 import Head  from '../Componentes/Util/Head';
 import TituloPagina from '../Componentes/Util/TituloPagina';
+import FeedbackSessao from '../Componentes/Util/FeedbackSessao';
 
 const Registros = () => {
     return (
@@ -12,6 +13,7 @@ const Registros = () => {
 
             <section className="animarEntradaSessao">
                 <TituloPagina>Registros</TituloPagina>
+                <FeedbackSessao mensagem="Carregando" classe="carregando"/>
             </section>
         </>
     );
