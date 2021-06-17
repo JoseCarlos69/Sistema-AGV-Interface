@@ -1,5 +1,6 @@
 import React from 'react';
 import SessaoTela from '../Util/SessaoTela';
+import FeedbackAtividade from './FeedbackAtividade';
 import CardAtividade from './CardAtividade';
 // Redux
 import { useDispatch, useSelector } from 'react-redux';
@@ -24,27 +25,27 @@ const SessaoAtividades = () => {
         return () => clearInterval(intervalo);
     }, [dispatch]);
 
-    if (loading && !sensores) return <SessaoTela titulo="Carregando atividades"></SessaoTela>;
-
-    if (erro) return <SessaoTela titulo="Erro ao buscar atividades"></SessaoTela>;
-
-    if (sensores) {
+    if (!(sensores?.length > 0)) {
         return (
             <SessaoTela titulo="Atividades">
-                { sensores.map(({ status, sensor, condicao, descricao }) => (
-                    <CardAtividade
-                        key={sensor}
-                        status={status}
-                        sensor={sensor}
-                        condicao={condicao}
-                        descricao={descricao}
-                    />
-                )) }
+                <FeedbackAtividade erro={erro} loading={loading}/>
             </SessaoTela>
         );
     }
 
-    return null;
+    return (
+        <SessaoTela titulo="Atividades">
+            { sensores.map(({ status, sensor, condicao, descricao }) => (
+                <CardAtividade
+                    key={sensor}
+                    status={status}
+                    sensor={sensor}
+                    condicao={condicao}
+                    descricao={descricao}
+                />
+            )) }
+        </SessaoTela>
+    );
 };
 
 export default SessaoAtividades;

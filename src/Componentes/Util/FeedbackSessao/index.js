@@ -4,7 +4,7 @@ import estilos from './index.module.css';
 const FeedbackSessao = ({mensagem, classe}) => {
   return (
     <div className={estilos.FeedbackSessao}>
-      <p className={`${estilos.mensagem} ${estilos[classe]}`}>{ mensagem }</p>
+      <p className={`${estilos.mensagem} ${(classe) ? estilos[classe] : ''}`}>{ mensagem }</p>
     </div>
     
   );
