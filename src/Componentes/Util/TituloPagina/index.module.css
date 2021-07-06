@@ -9,6 +9,9 @@
 
 @media (max-width: 660px) {
     .TituloPagina {
+        max-width: 75%;
+        margin: 0 auto 1.5rem 0;
         font-size: 2rem;
+        text-transform: capitalize;
     }   
 }

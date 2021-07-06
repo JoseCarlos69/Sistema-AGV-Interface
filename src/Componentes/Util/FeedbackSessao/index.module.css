@@ -18,7 +18,7 @@
 }
 
 .mensagem.erro {
-  color: #e99;
+  color: var(--corInativo);
 }
 
 .mensagem.carregando:after {
