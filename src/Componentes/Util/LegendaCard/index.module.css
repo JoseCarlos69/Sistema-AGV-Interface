@@ -7,7 +7,7 @@
     text-align: center;
     text-transform: capitalize;
     color: var(--branco);
-    background-color: #FF4646;
+    background-color: var(--vermelho);
     box-shadow: var(--sombra);
     display: block;
     position: absolute;
